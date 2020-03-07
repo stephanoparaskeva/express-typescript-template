@@ -4,8 +4,8 @@ import { config } from 'dotenv';
 config();
 
 export const env = process.env.APP_ENV || 'dev';
-export const port = process.env.APP_PORT || 4444;
-export const secret = process.env.APP_SECRET || 'secret';
+export const port = process.env.APP_PORT || 4000;
+export const secret = process.env.APP_SECRET || '';
 export const extension = process.env.APP_FILE_EXTENSION || 'ts';
 export const secureRoutesConstant = process.env.APP_SECURE_ROUTES_CONSTANT || true;
 export const controllersPath = process.env.APP_CONTROLLERS_PATH || '../../http/routes/';
