@@ -1,0 +1,14 @@
+{
+  "useTabs": false,
+  "requireConfig": false,
+  "semi": true,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "editor.formatOnSave": true,
+  "jsxBracketSameLine": true,
+  "proseWrap": "always",
+  "arrowParens": "avoid",
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "printWidth": 100
+}
