@@ -2,17 +2,17 @@
   "type": "postgres",
   "host": "localhost",
   "port": 5432,
-  "username": "postgres",
+  "username": "Stephano",
   "password": "",
   "database": "main_db_6374_development",
   "synchronize": true,
   "logging": false,
-  "migrations": ["db/migration/**/*.ts"],
-  "subscribers": ["db/subscriber/**/*.ts"],
-  "entities": ["api/http/entities/**/*.ts"],
+  "migrations": ["db/migration/**/*{.ts,.js}"],
+  "subscribers": ["db/subscriber/**/*{.ts,.js}"],
+  "entities": ["dist/**/*.entity{.ts,.js}", "app/**/*.entity{.ts,.js}"],
   "cli": {
     "migrationsDir": "db/migration",
     "subscribersDir": "db/subscriber",
-    "entitiesDir": "api/http/entities"
+    "entitiesDir": ""
   }
 }

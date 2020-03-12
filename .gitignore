@@ -4,3 +4,4 @@ dist/
 .idea/
 .vscode/
 node_modules/
+meta/logging/logs/
