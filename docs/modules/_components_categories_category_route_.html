@@ -70,82 +70,276 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_components_categories_category_route_.html#indexcategories" class="tsd-kind-icon">index<wbr>Categories</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_components_categories_category_route_.html#createcategory" class="tsd-kind-icon">create<wbr>Category</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_components_categories_category_route_.html#deletecategory" class="tsd-kind-icon">delete<wbr>Category</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_components_categories_category_route_.html#editcategory" class="tsd-kind-icon">edit<wbr>Category</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_components_categories_category_route_.html#indexcategories" class="tsd-kind-icon">index<wbr>Categories</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_components_categories_category_route_.html#showcategory" class="tsd-kind-icon">show<wbr>Category</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="createcategory" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> create<wbr>Category</h3>
+					<div class="tsd-signature tsd-kind-icon">create<wbr>Category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L48">app/components/categories/category.route.ts:48</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="createcategory.endpoint" class="tsd-anchor"></a>
+						<h3>endpoint</h3>
+						<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/categories&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L50">app/components/categories/category.route.ts:50</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="createcategory.method" class="tsd-anchor"></a>
+						<h3>method</h3>
+						<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;post&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L49">app/components/categories/category.route.ts:49</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="createcategory.middleware" class="tsd-anchor"></a>
+						<h3>middleware</h3>
+						<div class="tsd-signature tsd-kind-icon">middleware<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [createCategoryVal,async (req, res) &#x3D;&gt; {const { title, description } &#x3D; req.body;const categoryRepo &#x3D; getRepository(Category);try {const categoryBody &#x3D; { title, description };const savedCategory &#x3D; await categoryRepo.save(categoryBody);res.status(200).json(savedCategory);} catch (err) {console.log(err);logger.error([err, req]);throw err;}},]</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L52">app/components/categories/category.route.ts:52</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="deletecategory" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> delete<wbr>Category</h3>
+					<div class="tsd-signature tsd-kind-icon">delete<wbr>Category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L99">app/components/categories/category.route.ts:99</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="deletecategory.endpoint-1" class="tsd-anchor"></a>
+						<h3>endpoint</h3>
+						<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/categories/:categoryId&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L101">app/components/categories/category.route.ts:101</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="deletecategory.method-1" class="tsd-anchor"></a>
+						<h3>method</h3>
+						<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;delete&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L100">app/components/categories/category.route.ts:100</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="deletecategory.middleware-1" class="tsd-anchor"></a>
+						<h3>middleware</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">middleware<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span>, _next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L103">app/components/categories/category.route.ts:103</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>req: <span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									</li>
+									<li>
+										<h5>res: <span class="tsd-signature-type">Response</span></h5>
+									</li>
+									<li>
+										<h5>_next: <span class="tsd-signature-type">NextFunction</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="editcategory" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> edit<wbr>Category</h3>
+					<div class="tsd-signature tsd-kind-icon">edit<wbr>Category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L73">app/components/categories/category.route.ts:73</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="editcategory.endpoint-2" class="tsd-anchor"></a>
+						<h3>endpoint</h3>
+						<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/categories/:categoryId&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L75">app/components/categories/category.route.ts:75</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="editcategory.method-2" class="tsd-anchor"></a>
+						<h3>method</h3>
+						<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;patch&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L74">app/components/categories/category.route.ts:74</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="editcategory.middleware-2" class="tsd-anchor"></a>
+						<h3>middleware</h3>
+						<div class="tsd-signature tsd-kind-icon">middleware<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [editCategoryVal,async (req, res) &#x3D;&gt; {const { title, description } &#x3D; req.body;const { categoryId } &#x3D; req.params;const categoryRepo &#x3D; getRepository(Category);try {const categoryBody &#x3D; { title, description };const editedCategory &#x3D; await categoryRepo.update(categoryId, categoryBody);res.status(200).json(editedCategory);} catch (err) {console.log(err);logger.error([err, req]);throw err;}},]</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L77">app/components/categories/category.route.ts:77</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
 					<a name="indexcategories" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> index<wbr>Categories</h3>
 					<div class="tsd-signature tsd-kind-icon">index<wbr>Categories<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/components/categories/category.route.ts#L4">app/components/categories/category.route.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L7">app/components/categories/category.route.ts:7</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="indexcategories.endpoint" class="tsd-anchor"></a>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="indexcategories.endpoint-3" class="tsd-anchor"></a>
 						<h3>endpoint</h3>
-						<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/v1/categories&quot;</span></div>
+						<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/categories&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/components/categories/category.route.ts#L6">app/components/categories/category.route.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L9">app/components/categories/category.route.ts:9</a></li>
 							</ul>
 						</aside>
 					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="indexcategories.handler" class="tsd-anchor"></a>
-						<h3>handler</h3>
-						<div class="tsd-signature tsd-kind-icon">handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> = categoriesController.indexCategoriesController</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/components/categories/category.route.ts#L7">app/components/categories/category.route.ts:7</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-								<li class="tsd-parameter-siganture">
-									<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
-										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></li>
-									</ul>
-									<ul class="tsd-descriptions">
-										<li class="tsd-description">
-											<h4 class="tsd-parameters-title">Parameters</h4>
-											<ul class="tsd-parameters">
-												<li>
-													<h5>req: <span class="tsd-signature-type">Request</span></h5>
-												</li>
-												<li>
-													<h5>res: <span class="tsd-signature-type">Response</span></h5>
-												</li>
-												<li>
-													<h5>next: <span class="tsd-signature-type">NextFunction</span></h5>
-												</li>
-											</ul>
-											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></h4>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="indexcategories.method" class="tsd-anchor"></a>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="indexcategories.method-3" class="tsd-anchor"></a>
 						<h3>method</h3>
 						<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;get&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/components/categories/category.route.ts#L5">app/components/categories/category.route.ts:5</a></li>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L8">app/components/categories/category.route.ts:8</a></li>
 							</ul>
 						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="indexcategories.middleware-3" class="tsd-anchor"></a>
+						<h3>middleware</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">middleware<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span>, _next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L11">app/components/categories/category.route.ts:11</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>req: <span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									</li>
+									<li>
+										<h5>res: <span class="tsd-signature-type">Response</span></h5>
+									</li>
+									<li>
+										<h5>_next: <span class="tsd-signature-type">NextFunction</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="showcategory" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> show<wbr>Category</h3>
+					<div class="tsd-signature tsd-kind-icon">show<wbr>Category<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L27">app/components/categories/category.route.ts:27</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="showcategory.endpoint-4" class="tsd-anchor"></a>
+						<h3>endpoint</h3>
+						<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/categories/:categoryId&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L29">app/components/categories/category.route.ts:29</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="showcategory.method-4" class="tsd-anchor"></a>
+						<h3>method</h3>
+						<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;get&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L28">app/components/categories/category.route.ts:28</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="showcategory.middleware-4" class="tsd-anchor"></a>
+						<h3>middleware</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">middleware<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span>, _next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/components/categories/category.route.ts#L31">app/components/categories/category.route.ts:31</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>req: <span class="tsd-signature-type">Request</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									</li>
+									<li>
+										<h5>res: <span class="tsd-signature-type">Response</span></h5>
+									</li>
+									<li>
+										<h5>_next: <span class="tsd-signature-type">NextFunction</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							</li>
+						</ul>
 					</section>
 				</section>
 			</section>
@@ -163,8 +357,20 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_components_categories_category_route_.html#createcategory" class="tsd-kind-icon">create<wbr>Category</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_components_categories_category_route_.html#deletecategory" class="tsd-kind-icon">delete<wbr>Category</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_components_categories_category_route_.html#editcategory" class="tsd-kind-icon">edit<wbr>Category</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 						<a href="_components_categories_category_route_.html#indexcategories" class="tsd-kind-icon">index<wbr>Categories</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_components_categories_category_route_.html#showcategory" class="tsd-kind-icon">show<wbr>Category</a>
 					</li>
 				</ul>
 			</nav>

@@ -74,9 +74,9 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_settings_.html#env" class="tsd-kind-icon">env</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_settings_.html#exitonexception" class="tsd-kind-icon">exit<wbr>OnException</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_settings_.html#extension" class="tsd-kind-icon">extension</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_settings_.html#port" class="tsd-kind-icon">port</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_settings_.html#routespath" class="tsd-kind-icon">routes<wbr>Path</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_settings_.html#secret" class="tsd-kind-icon">secret</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_settings_.html#secureroutesconstant" class="tsd-kind-icon">secure<wbr>Routes<wbr>Constant</a></li>
 							</ul>
@@ -92,7 +92,17 @@
 					<div class="tsd-signature tsd-kind-icon">env<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = process.env.APP_ENV || &#x27;dev&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/config/settings.ts#L6">app/config/settings.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/config/settings.ts#L6">app/config/settings.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="exitonexception" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> exit<wbr>OnException</h3>
+					<div class="tsd-signature tsd-kind-icon">exit<wbr>OnException<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> = process.env.APP_EXIT_ON_EXCEPTION || true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/config/settings.ts#L11">app/config/settings.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -102,7 +112,7 @@
 					<div class="tsd-signature tsd-kind-icon">extension<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = process.env.APP_FILE_EXTENSION || &#x27;ts&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/config/settings.ts#L9">app/config/settings.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/config/settings.ts#L9">app/config/settings.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -112,17 +122,7 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">4444</span><span class="tsd-signature-symbol"> = process.env.APP_PORT || 4444</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/config/settings.ts#L7">app/config/settings.ts:7</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
-					<a name="routespath" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> routes<wbr>Path</h3>
-					<div class="tsd-signature tsd-kind-icon">routes<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = process.env.APP_ROUTES_PATH || &#x27;../../components/&#x27;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/config/settings.ts#L11">app/config/settings.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/config/settings.ts#L7">app/config/settings.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -132,7 +132,7 @@
 					<div class="tsd-signature tsd-kind-icon">secret<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = process.env.APP_SECRET || &#x27;secret&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/config/settings.ts#L8">app/config/settings.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/config/settings.ts#L8">app/config/settings.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -142,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">secure<wbr>Routes<wbr>Constant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> = process.env.APP_SECURE_ROUTES_CONSTANT || true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/config/settings.ts#L10">app/config/settings.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/config/settings.ts#L10">app/config/settings.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -165,13 +165,13 @@
 						<a href="_config_settings_.html#env" class="tsd-kind-icon">env</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_config_settings_.html#exitonexception" class="tsd-kind-icon">exit<wbr>OnException</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="_config_settings_.html#extension" class="tsd-kind-icon">extension</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="_config_settings_.html#port" class="tsd-kind-icon">port</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="_config_settings_.html#routespath" class="tsd-kind-icon">routes<wbr>Path</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="_config_settings_.html#secret" class="tsd-kind-icon">secret</a>

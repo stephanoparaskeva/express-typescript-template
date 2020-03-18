@@ -1,12 +1,16 @@
+import router from 'express-promise-router';
 import { Router, Application } from 'express';
-import { applyRoutes } from '../utilities/apply-utils';
-import { routesPath } from '../../config/settings';
+import { applyRoutesToRouter } from '../utilities/applying-utils';
 
-const router = Router();
-
-const prepareForApplyMiddleware = (prefix: string, appliedRouter: Router) => (app: Application) =>
+/**
+ * @DESC: curried function that takes in a router and returns a middleware wrapper function that takes
+ * in the application and calls app.use with this router passed in. this function is exported from
+ * file after partial application of the router (with prefix).
+ */
+const appUseRouter = (prefix: string, appliedRouter: Router) => (app: Application) =>
   app.use(prefix, appliedRouter);
 
-const apiRouter = prepareForApplyMiddleware('/api', applyRoutes(router, routesPath, '.route.'));
+const routerWithDotRoute = applyRoutesToRouter(router(), '../../components/', '.route.');
+const preparedRouter = appUseRouter('', routerWithDotRoute);
 
-export default [apiRouter];
+export default [preparedRouter];

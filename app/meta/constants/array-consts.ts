@@ -1,1 +1,1 @@
-export const HTTP_VERBS = ['get', 'post', 'put', 'patch', 'delete'];
+export const HTTP_VERBS = ['get', 'post', 'put', 'patch', 'delete', 'all'];

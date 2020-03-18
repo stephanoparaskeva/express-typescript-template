@@ -1,12 +1,25 @@
+import { getRepository } from 'typeorm';
 import { Route } from '../../meta/types/common-types';
-import { createUserController } from './user.controller';
+import { HTTP500Error } from '../../lib/errors/http-errs';
+import { User } from './user.entity';
 
-const createUserRoute: Route = {
-  endpoint: '/users',
+export const createUserRoute: Route = {
   method: 'post',
-  middleware: createUserController,
-};
+  endpoint: '/users',
 
-export default {
-  createUserRoute,
+  middleware: async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+      const userRepo = getRepository(User);
+      const person1 = { email, password };
+
+      const x = await userRepo.save(person1);
+
+      res.status(200).json(x);
+    } catch (err) {
+      console.log(err);
+      throw new HTTP500Error(err.message);
+    }
+  },
 };

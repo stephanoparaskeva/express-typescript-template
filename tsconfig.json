@@ -23,7 +23,7 @@
     "allowSyntheticDefaultImports": true,
     "strictPropertyInitialization": false,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"]
+    "lib": ["dom", "es6", "es2017", "es2019", "es2019.array", "esnext.asynciterable"]
   },
   "exclude": ["node_modules"],
   "include": [

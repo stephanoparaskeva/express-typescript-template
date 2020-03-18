@@ -1,15 +1,15 @@
 import express, { Application } from 'express';
-import { applyMiddleware } from './lib/utilities/apply-utils';
-import errorMiddleware from './lib/middleware/error-mware';
-import middleware from './lib/middleware/common-mware';
-import routes from './lib/middleware/routing-mware';
+import { applyMiddlewareToApp } from './lib/utilities/applying-utils';
+import routesMiddleware from './lib/middleware/routing-mware';
+import commonMiddleware from './lib/middleware/common-mware';
+import errorsMiddleware from './lib/middleware/error-mware';
 
 const app: Application = express();
 
-const applyMiddlewareToApp = applyMiddleware(app);
+const partiallyAppliedApp = applyMiddlewareToApp(app);
 
-applyMiddlewareToApp(middleware);
-applyMiddlewareToApp(routes);
-applyMiddlewareToApp(errorMiddleware);
+partiallyAppliedApp(commonMiddleware);
+partiallyAppliedApp(routesMiddleware);
+partiallyAppliedApp(errorsMiddleware);
 
 export default app;

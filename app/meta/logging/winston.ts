@@ -2,41 +2,42 @@ import stream from 'stream';
 import morgan from 'morgan';
 import DailyRotateFile from 'winston-daily-rotate-file';
 import winston, { format, loggers } from 'winston';
-import { basename } from 'path';
 import { Response } from 'express';
-import { env } from '../../config/settings';
+import { removeNewline, logFormatter } from '../../lib/utilities/common-utils';
 
-// logging level based on environment.
-const level = env === 'development' ? 'debug' : 'info';
+// locally used strings.
+const level = 'error';
+const timePattern: string = 'HH:mm:ss';
+const datePattern: string = 'DD-MM-YYYY';
+const dateTime: string = `${datePattern} ${timePattern}`;
+const relativePath: string = '/app/meta/logging/logs/%DATE%-logs.log';
+const defaultFilename: string = `${process.cwd()}${relativePath}`;
 
-// daily file logging set up.
-const dailyRotateFileTransport = new DailyRotateFile({
-  filename: `${process.cwd()}/app/meta/logging/logs/%DATE%-logs.log`,
-  datePattern: 'DD-MM-YYYY',
-  format: format.printf(info => `${info.timestamp} ${info.level} [${info.label}]: ${info.message}`),
+// daily file logging transport set-up.
+const defaultTransportation = new DailyRotateFile({
+  format: format.printf(logFormatter),
+  filename: defaultFilename,
+  datePattern,
 });
 
 // default configuration for winston.
-const configuration = {
-  level,
-  format: format.combine(
-    format.label({ label: basename(process.mainModule?.filename || '') }),
-    format.timestamp({
-      format: 'DD-MM-YYYY HH:mm:ss',
-    })
-  ),
+const defaultConfiguration = {
+  format: format.timestamp({ format: dateTime }),
+  transports: [defaultTransportation],
   exitOnError: false,
-  transports: [dailyRotateFileTransport],
+  level,
 };
 
-// configuration to enable morgan to work with default config globally.
-const writeStream = { write: (message: string) => winston[level](message) };
-const skip = (_: any, res: Response) => res.statusCode < 400;
-winston.configure(configuration);
-winston.stream = (_options?: any) => new stream.Duplex(writeStream);
-const logger = morgan('combined', { stream: writeStream, skip });
-
 // named loggers for dynamic logging.
-loggers.add('realtimeLogger', configuration);
+loggers.add('realtimeLogger', defaultConfiguration);
 
-export default logger;
+// configuration for default winston logger to work with default config.
+const write = (message: string) => winston[level](removeNewline(message));
+winston.configure(defaultConfiguration);
+winston.stream = (_options?: any) => new stream.Duplex({ write });
+
+// configuration for morgan logger to work with default config for use in express.
+const skip = (_: any, res: Response) => res.statusCode < 500;
+const morganWinston = morgan('combined', { stream: { write }, skip });
+
+export default morganWinston;

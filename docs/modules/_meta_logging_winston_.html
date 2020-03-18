@@ -73,22 +73,27 @@
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#dailyrotatefiletransport" class="tsd-kind-icon">daily<wbr>Rotate<wbr>File<wbr>Transport</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#datepattern" class="tsd-kind-icon">date<wbr>Pattern</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#datetime" class="tsd-kind-icon">date<wbr>Time</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#defaultfilename" class="tsd-kind-icon">default<wbr>Filename</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#defaulttransportation" class="tsd-kind-icon">default<wbr>Transportation</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#level" class="tsd-kind-icon">level</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_meta_logging_winston_.html#logger" class="tsd-kind-icon">logger</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_meta_logging_winston_.html#morganwinston" class="tsd-kind-icon">morgan<wbr>Winston</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#relativepath" class="tsd-kind-icon">relative<wbr>Path</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#timepattern" class="tsd-kind-icon">time<wbr>Pattern</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#skip" class="tsd-kind-icon">skip</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#write" class="tsd-kind-icon">write</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#configuration" class="tsd-kind-icon">configuration</a></li>
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#writestream" class="tsd-kind-icon">write<wbr>Stream</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_meta_logging_winston_.html#defaultconfiguration" class="tsd-kind-icon">default<wbr>Configuration</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,32 +102,82 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="dailyrotatefiletransport" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> daily<wbr>Rotate<wbr>File<wbr>Transport</h3>
-					<div class="tsd-signature tsd-kind-icon">daily<wbr>Rotate<wbr>File<wbr>Transport<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DailyRotateFile</span><span class="tsd-signature-symbol"> = new DailyRotateFile({filename: &#x60;${process.cwd()}/support/logging/logs/%DATE%-logs.log&#x60;,datePattern: &#x27;DD-MM-YYYY&#x27;,format: format.printf(info &#x3D;&gt; &#x60;${info.timestamp} ${info.level} [${info.label}]: ${info.message}&#x60;),})</span></div>
+					<a name="datepattern" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> date<wbr>Pattern</h3>
+					<div class="tsd-signature tsd-kind-icon">date<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;DD-MM-YYYY&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L13">app/meta/logging/winston.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L11">app/meta/logging/winston.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="datetime" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> date<wbr>Time</h3>
+					<div class="tsd-signature tsd-kind-icon">date<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x60;${datePattern} ${timePattern}&#x60;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L12">app/meta/logging/winston.ts:12</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="defaultfilename" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Filename</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Filename<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x60;${process.cwd()}${relativePath}&#x60;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L14">app/meta/logging/winston.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="defaulttransportation" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Transportation</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Transportation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DailyRotateFile</span><span class="tsd-signature-symbol"> = new DailyRotateFile({format: format.printf(logFormatter),filename: defaultFilename,datePattern,})</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L17">app/meta/logging/winston.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="level" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> level</h3>
-					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"debug"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"info"</span><span class="tsd-signature-symbol"> = env &#x3D;&#x3D;&#x3D; &#x27;development&#x27; ? &#x27;debug&#x27; : &#x27;info&#x27;</span></div>
+					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"error"</span><span class="tsd-signature-symbol"> = &quot;error&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L9">app/meta/logging/winston.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L9">app/meta/logging/winston.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
-					<a name="logger" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> logger</h3>
-					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = morgan(&#x27;combined&#x27;, { stream: writeStream, skip })</span></div>
+					<a name="morganwinston" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> morgan<wbr>Winston</h3>
+					<div class="tsd-signature tsd-kind-icon">morgan<wbr>Winston<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RequestHandler</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ParamsDictionary</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = morgan(&#x27;combined&#x27;, { stream: { write }, skip })</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L34">app/meta/logging/winston.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L41">app/meta/logging/winston.ts:41</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="relativepath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> relative<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">relative<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;/app/meta/logging/logs/%DATE%-logs.log&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L13">app/meta/logging/winston.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="timepattern" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> time<wbr>Pattern</h3>
+					<div class="tsd-signature tsd-kind-icon">time<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;HH:mm:ss&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L10">app/meta/logging/winston.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -139,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L11">app/meta/logging/winston.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L40">app/meta/logging/winston.ts:40</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -155,90 +210,80 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="write" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> write</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L35">app/meta/logging/winston.ts:35</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>message: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Logger</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="configuration" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="defaultconfiguration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Configuration</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L19">app/meta/logging/winston.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L24">app/meta/logging/winston.ts:24</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="configuration.exitonerror" class="tsd-anchor"></a>
+						<a name="defaultconfiguration.exitonerror" class="tsd-anchor"></a>
 						<h3>exit<wbr>OnError</h3>
 						<div class="tsd-signature tsd-kind-icon">exit<wbr>OnError<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L27">app/meta/logging/winston.ts:27</a></li>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L27">app/meta/logging/winston.ts:27</a></li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="configuration.format" class="tsd-anchor"></a>
+						<a name="defaultconfiguration.format" class="tsd-anchor"></a>
 						<h3>format</h3>
-						<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Format</span><span class="tsd-signature-symbol"> = format.combine(format.label({ label: path.basename(process.mainModule?.filename || &#x27;&#x27;) }),format.timestamp({format: &#x27;DD-MM-YYYY HH:mm:ss&#x27;,}))</span></div>
+						<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Format</span><span class="tsd-signature-symbol"> = format.timestamp({ format: dateTime })</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L21">app/meta/logging/winston.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L25">app/meta/logging/winston.ts:25</a></li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="configuration.level-1" class="tsd-anchor"></a>
+						<a name="defaultconfiguration.level-1" class="tsd-anchor"></a>
 						<h3>level</h3>
 						<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L20">app/meta/logging/winston.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L28">app/meta/logging/winston.ts:28</a></li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="configuration.transports" class="tsd-anchor"></a>
+						<a name="defaultconfiguration.transports" class="tsd-anchor"></a>
 						<h3>transports</h3>
-						<div class="tsd-signature tsd-kind-icon">transports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DailyRotateFile</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [dailyRotateFileTransport]</span></div>
+						<div class="tsd-signature tsd-kind-icon">transports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DailyRotateFile</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [defaultTransportation]</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L28">app/meta/logging/winston.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/7c1cd34/app/meta/logging/winston.ts#L26">app/meta/logging/winston.ts:26</a></li>
 							</ul>
 						</aside>
-					</section>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="writestream" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> write<wbr>Stream</h3>
-					<div class="tsd-signature tsd-kind-icon">write<wbr>Stream<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L10">app/meta/logging/winston.ts:10</a></li>
-						</ul>
-					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="writestream.write" class="tsd-anchor"></a>
-						<h3>write</h3>
-						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal tsd-is-not-exported">
-							<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span></li>
-						</ul>
-						<ul class="tsd-descriptions">
-							<li class="tsd-description">
-								<aside class="tsd-sources">
-									<ul>
-										<li>Defined in <a href="https://github.com/stephanoparaskeva/application_6374/blob/fbce8cb/app/meta/logging/winston.ts#L10">app/meta/logging/winston.ts:10</a></li>
-									</ul>
-								</aside>
-								<h4 class="tsd-parameters-title">Parameters</h4>
-								<ul class="tsd-parameters">
-									<li>
-										<h5>message: <span class="tsd-signature-type">string</span></h5>
-									</li>
-								</ul>
-								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Logger</span></h4>
-							</li>
-						</ul>
 					</section>
 				</section>
 			</section>
@@ -257,22 +302,37 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_meta_logging_winston_.html#dailyrotatefiletransport" class="tsd-kind-icon">daily<wbr>Rotate<wbr>File<wbr>Transport</a>
+						<a href="_meta_logging_winston_.html#datepattern" class="tsd-kind-icon">date<wbr>Pattern</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_meta_logging_winston_.html#datetime" class="tsd-kind-icon">date<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_meta_logging_winston_.html#defaultfilename" class="tsd-kind-icon">default<wbr>Filename</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_meta_logging_winston_.html#defaulttransportation" class="tsd-kind-icon">default<wbr>Transportation</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_meta_logging_winston_.html#level" class="tsd-kind-icon">level</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="_meta_logging_winston_.html#logger" class="tsd-kind-icon">logger</a>
+						<a href="_meta_logging_winston_.html#morganwinston" class="tsd-kind-icon">morgan<wbr>Winston</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_meta_logging_winston_.html#relativepath" class="tsd-kind-icon">relative<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_meta_logging_winston_.html#timepattern" class="tsd-kind-icon">time<wbr>Pattern</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_meta_logging_winston_.html#skip" class="tsd-kind-icon">skip</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_meta_logging_winston_.html#configuration" class="tsd-kind-icon">configuration</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_meta_logging_winston_.html#write" class="tsd-kind-icon">write</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_meta_logging_winston_.html#writestream" class="tsd-kind-icon">write<wbr>Stream</a>
+						<a href="_meta_logging_winston_.html#defaultconfiguration" class="tsd-kind-icon">default<wbr>Configuration</a>
 					</li>
 				</ul>
 			</nav>
